@@ -1,0 +1,203 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #150a22;
+    padding: 0 3.5vw 0 3.5vw;
+}
+.navbar a, .divisa a{
+    height: 50%;
+    margin-right: 2vw;
+    text-decoration: none;
+}
+.divisa a:nth-child(5){
+    margin-right: 0;
+}
+.fa-dice{
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+.menu-btn{
+    background-color: #00000000;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    margin: 4px 0 0 3vw;
+}
+.search-btn{
+    background-color: #00000000;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+.divisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 225px;
+}
+/* SEARCHBAR */
+.search-box{
+    margin-right: 1vw;
+    position: relative;
+    height: 55px;
+    width: 55px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box.active{
+    width: 350px;
+}
+.search-box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #1d1236;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 0 60px 0 20px;
+    opacity: 0;
+    color: #e0e0e0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: default;
+}
+.search-box input.active{
+    opacity: 1;
+    cursor: text;
+}
+.search-box input::placeholder{
+    color: #a8a8a8;
+}
+.search-box .search-btn{
+    height: 45px;
+    width: 45px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    place-items: center;
+    display: grid;
+    transform: translateY(-50%);
+    background-color: #00000000;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .search-btn.active{
+    opacity: 0;
+    cursor: default;
+    z-index: 0;
+    transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-btn{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    place-items: center;
+    display: grid;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    cursor: default;
+    z-index: 0;
+}
+.search-box .cancel-btn.active{
+    transform: translateY(-50%) rotate(180deg);
+    opacity: 1;
+    cursor: pointer;
+    z-index: 1;
+}
+/* BUTTONS */
+.register-btn{
+    width: 120px;
+    height: 45px;
+    cursor: pointer;
+    color: #e0e0e0;
+    background-color: #00000000;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 18px;
+    border: #1d84db solid 3px;
+    position: relative;
+    z-index: 1;
+}
+.register-btn::after{
+    content: "";
+    width: 0;
+    position: absolute;
+    background-color: #1d84db;
+    left: 0;
+    height: 100%;
+    top: 0;
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: -1;
+}
+.register-btn:hover::after{
+    width: 100%;
+}
+.register-btn:hover{
+    color: #ffffff;
+}
+.login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+    color: #e0e0e0;
+    font-size: 18px;
+    position: relative;
+}
+.login-btn::after{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s ease-in-out;
+}
+.login-btn:hover::after{
+    width: 100%;
+}
+.login-btn:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+@media only screen and (max-width:320px){
+    .logo{
+        width: 125px;
+    }
+    .login-btn, .register-btn, .search-box{
+        display: none;
+    }
+    .menu-btn, .search-btn{
+        display: flex;
+    }
+    .search-btn{
+        margin-right: 4vw;
+    }
+    nav{
+        height: 5vh;
+    }
+    i{
+        font-size: 14px !important;
+    }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@font-face {
+    font-family: 'Invisible';
+    src: url('/fonts/InvisibleExtraBold.otf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+.space{
+    background-color: #252525;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow: overlay;
+}
+.space a{
+    color: #a0a0a0;
+}
+h1 p .btn-teste:hover{
+    cursor: pointer;
+}

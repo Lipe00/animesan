@@ -1,0 +1,471 @@
+/* CONTAINER: CAROUSEL */
+.carousel{
+    width: 100vw;
+    height: 585px;
+    position: relative !important;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide:hover{
+    cursor: pointer;
+}
+.slide{
+    height: 100%;
+    position: relative !important;
+}
+.texto{
+    width: 100vw;
+    font-size: 18px;
+    height: 113px;
+    color: #f0f0f0;
+    background-color: #00000066;
+    padding: 0 1vw 0 1vw;
+    position: absolute;
+    bottom: 0;
+    border-bottom: solid #00000000 25px;
+    border-top: solid #00000000 5px;
+    /* LIMITADOR */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.texto h1{
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.swiper-pagination-bullet{
+    background-color: #ffffff !important;
+    margin: 0 8px 0 8px !important;
+}
+.swiper-pagination{
+    bottom: 0 !important;
+}
+/* CONTAINER: SLIDER */
+.content{
+    top: 0;
+    display: flex;
+    position: relative;
+    height: 315px;
+    width: 100%;
+    /* background-color: red; */
+}
+.swuiper{
+    width: 0;
+    height: 325px;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-navBtn{
+    color: #0099ff !important;
+    top: 130px !important;
+}
+/* SLIDER: CARD */
+.container{
+    position: relative;
+    align-items: center !important;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3.5vw 0 3.5vw;
+    width: 93%;
+}
+.card{
+    position: relative;
+    height: min-content;
+    color: #e0e0e0;
+    width: 150px;
+    margin: 10px 0px 0 11px;
+    transition: 0.2s ease-in-out;
+}
+.card img{
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+}
+.card p{
+    width: 150px;
+    /* LIMITADOR */
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.slider{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.card:hover{
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.hover{
+    top: 0;
+    position: absolute;
+    width: 150px;
+    height: 225px;
+    background-color: #000000;
+    opacity: 0.0;
+}
+.card:hover .a-info{
+    opacity: 1.0;
+}
+.card:hover .hover{
+    opacity: 0.5;
+}
+.a-info{
+    top: 0;
+    position: absolute;
+    width: 10rem;
+    height: 15rem;
+    color: #ffffff;
+    opacity: 0.0;
+    font-size: 12px;
+    padding: 0 5px 0 5px
+}
+.a-info p{
+    font-size: 14px;
+}
+.a-nome{
+    font-size: 16px ;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    /* LIMITADOR */
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.categoria a{
+    color: #ffffff;
+    font-size: 22px;
+    width: max-content;
+    height: 24px;
+    margin: 2vh 0 0 7.65vw;
+    align-items: center;
+    display: flex;
+    transition: 0.1s ease-in-out;
+    font-weight: bold;
+}
+.categoria i{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.categoria a:hover{
+    cursor: pointer;
+}
+
+/* RESPONSIVIDADE -------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:2560px){
+    .categoria{
+        margin-left:  -0.25vw;
+    }
+    .left{
+        left: 40px !important;
+    }
+    .right{
+        right: 40px !important;
+    }
+}
+
+@media only screen and (max-width:1920px){
+    .categoria{
+        margin-left:  -0.15vw;
+    }
+    .left{
+        left: 20px !important;
+    }
+    .right{
+        right: 20px !important;
+    }
+}
+
+@media only screen and (max-width:1600px){
+    .carousel{
+        height: 585px;
+    }
+    .categoria{
+        margin-left:  0;
+    }
+}
+
+@media only screen and (max-width:1440px){
+    .carousel{
+        height: 585px;
+    }
+    .categoria{
+        margin-left:  0.15vw;
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .carousel{
+        height: 50vh;
+    }
+    .left{
+        left: -5px !important;
+    }
+    .right{
+        right: -5px !important;
+    }
+    .categoria{
+        margin-left:  0.25vw;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .carousel{
+        height: 40vh;
+    }
+    .texto{
+        height: 85px;
+        -webkit-line-clamp: 2;
+    }
+    .left{
+        left: -10px !important;
+    }
+    .right{
+        right: -10px !important;
+    }
+    .hover, .a-info{
+        display: none;
+    }
+    .categoria{
+        margin-left:  0.5vw;
+    }
+    .card{
+        margin-left: 7.75px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .carousel{
+        height: 30vh;
+    }
+    .texto{
+        height: 65px;
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+    }
+    .texto h1{
+        font-size: 14px;
+    }
+    .card{
+        width: 80px;
+        margin: 5px 0px 0 6px;
+    }
+    .card img{
+        width: 80px;
+        height: 120px;
+    }
+    .card p{
+        width: 80px;
+        font-size: 12px;
+    }
+    .swiper-navBtn{
+        transform: scale(0.5);
+        top: 65px !important;
+    }
+    .content{
+        height: 180px;
+    }
+    .left{
+        left: -10px !important;
+    }
+    .right{
+        right: -10px !important;
+    }
+    .categoria{
+        margin: 2vh 0 0 8.5vw;
+    }
+    .categoria i{
+        font-size: 12px;
+    }
+    .hover, .a-info{
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        transform: scale(0.75);
+        margin: 0 4px 0 4px !important;
+    }
+    .categoria a{
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .carousel{
+        height: 25vh;
+    }
+    .texto{
+        height: 65px;
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+    }
+    .texto h1{
+        font-size: 14px;
+    }
+    .card{
+        width: 80px;
+        margin: 5px 0px 0 6px;
+    }
+    .card img{
+        width: 80px;
+        height: 120px;
+    }
+    .card p{
+        width: 80px;
+        font-size: 12px;
+    }
+    .swiper-navBtn{
+        transform: scale(0.5);
+        top: 65px !important;
+    }
+    .content{
+        height: 180px;
+    }
+    .left{
+        left: -10px !important;
+    }
+    .right{
+        right: -10px !important;
+    }
+    .categoria{
+        font-size: 14px;
+        margin: 2vh 0 0 8.25vw;
+    }
+    .categoria i{
+        font-size: 12px;
+    }
+    .hover, .a-info{
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        transform: scale(0.75);
+        margin: 0 4px 0 4px !important;
+    }
+    .categoria a{
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .carousel{
+        height: 25vh;
+    }
+    .texto{
+        height: 65px;
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+    }
+    .texto h1{
+        font-size: 14px;
+    }
+    .card{
+        width: 80px;
+        margin: 5px 0px 0 6px;
+    }
+    .card img{
+        width: 80px;
+        height: 120px;
+    }
+    .card p{
+        width: 80px;
+        font-size: 12px;
+    }
+    .swiper-navBtn{
+        transform: scale(0.5);
+        top: 65px !important;
+    }
+    .content{
+        height: 180px;
+    }
+    .left{
+        left: -10px !important;
+    }
+    .right{
+        right: -10px !important;
+    }
+    .categoria{
+        font-size: 14px;
+        margin: 2vh 0 0 8.25vw;
+    }
+    .categoria i{
+        font-size: 12px;
+    }
+    .hover, .a-info{
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        transform: scale(0.75);
+        margin: 0 4px 0 4px !important;
+    }
+    .categoria a{
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:320px){
+    .carousel{
+        height: 25vh;
+    }
+    .texto{
+        height: 65px;
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+    }
+    .texto h1{
+        font-size: 14px;
+    }
+    .card{
+        width: 80px;
+        margin: 5px 0px 0 6px;
+    }
+    .card img{
+        width: 80px;
+        height: 120px;
+    }
+    .card p{
+        width: 80px;
+        font-size: 12px;
+    }
+    .swiper-navBtn{
+        transform: scale(0.5);
+        top: 65px !important;
+    }
+    .content{
+        height: 180px;
+    }
+    .categoria{
+        font-size: 14px;
+        margin: 2vh 0 0 8.75vw;
+    }
+    .categoria i{
+        font-size: 12px;
+    }
+    .hover, .a-info{
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        transform: scale(0.75);
+        margin: 0 4px 0 4px !important;
+    }
+    .categoria a{
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
