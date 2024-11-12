@@ -31,10 +31,6 @@
                     echo"<center style='color:#ff0000; font-size:20px;'>$erro</center>";
                 }
             }else{
-
-            
-            
-            
             require_once("./conexao.php");
 
             // Variável para descriptografar senha 
